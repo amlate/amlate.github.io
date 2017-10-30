@@ -1,6 +1,6 @@
-import {Component,Input} from '@angular/core';
-import {Hero} from './hero';
+import { Component, Input } from '@angular/core';
 
+import { Hero } from './hero';
 @Component({
   selector: 'hero-detail',
   template: `
@@ -14,7 +14,6 @@ import {Hero} from './hero';
     </div>
   `
 })
-
-export class HeroDetailComponent{
-	@Input() hero:Hero;
+export class HeroDetailComponent {
+  @Input() hero: Hero;
 }
