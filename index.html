@@ -4,13 +4,29 @@
 <meta name="keywords" content="机电4组 jidian4zu 机电4组日产专营 齐齐哈尔汽车修理 齐齐哈尔汽车维修 永安立交桥汽车维修 齐齐哈尔修车 汽车维修">
 <meta name="baidu-site-verification" content="4IlRgGIJdJ" />
 <style type="text/css">
-body{
-	background-image: url('background.jpg');
-	//background-repeat: no-repeat;
-}
+html{height:100%}  
+body{height:100%;margin:0px;padding:0px}  
+#container{width: 100%;height: 800px;}
 </style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=d1UkkvOOKW4IbhNXGVHAtLdHIHNbizeh">
+</script>
+<script type="text/javascript">
+function initialize() {  
+var map = new BMap.Map("container");          // 创建地图实例  
+var point = new BMap.Point(123.944604, 47.331149);  // 创建点坐标 
+map.centerAndZoom(point, 18); 
+var marker= new BMap.Marker(point);
+map.addOverlay(marker);  
+var label = new BMap.Label("机电4组日产专营欢迎您！",{offset:new BMap.Size(20,-10)});
+marker.setLabel(label);
+map.enableScrollWheelZoom(true);  //开启拖拽
+}
+window.onload=initialize
+</script>
 </head>
 <body>
-	
+	<div id="container">
+
+	</div>
 </body>
 </html>
