@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>CanvasTest</title>
+<title>fireworks</title>
 <style>
 body {
   background: #000;
@@ -16,7 +16,7 @@ canvas {
 }</style>
 </head>
 <body>
-<canvas width="1350" height="150"></canvas>
+<canvas></canvas>
 <script>
 'use strict';
 
@@ -33,6 +33,7 @@ var Scene = function () {
     this.GOLDEN = (Math.sqrt(5) + 1) / 2;
     this.canvas = document.querySelector('canvas');
     this.ctx = this.canvas.getContext('2d');
+    //设备像素比
     this.dpr = window.devicePixelRatio;
     this.reset();
     window.addEventListener('resize', function () {
@@ -67,6 +68,7 @@ var Scene = function () {
     var amp = 0;
     for (var i = 0; i < count; i++) {
       angle += this.GOLDEN * this.TAU + Math.sin(this.tick * 0.03) * 0.001;
+      //变化的频率
       amp += (i - count / 2) * 0.01 + Math.cos(this.tick * 0.015) * 1;
       var x = Math.cos(angle) * amp + Math.cos(this.tick * 0.0075) * (count - i) * 0.3;
       var y = Math.sin(angle) * amp + Math.sin(this.tick * 0.0075) * (count - i) * 0.3;
